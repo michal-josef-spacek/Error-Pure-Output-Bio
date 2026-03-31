@@ -14,6 +14,7 @@ Makefile.PL
 MANIFEST			This list of files
 META.yml
 README
+SIGNATURE
 t/Error-Pure-Output-Bio/01-use.t
 t/Error-Pure-Output-Bio/02-version.t
 t/Error-Pure-Output-Bio/03-err_bio.t
