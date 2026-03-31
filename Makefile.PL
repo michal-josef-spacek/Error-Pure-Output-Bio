@@ -9,6 +9,7 @@ abstract 'Output bioperl subroutines for Error::Pure.';
 author 'Michal Spacek <skim@cpan.org>';
 license 'bsd';
 name 'Error-Pure-Output-Bio';
+readme_from 'Bio.pm';
 requires 'Error::Pure::Utils' => 0.11;
 requires 'Exporter' => 0;
 requires 'Readonly' => 0;
