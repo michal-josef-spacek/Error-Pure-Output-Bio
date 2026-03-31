@@ -77,20 +77,20 @@ Error::Pure::Output::Bio - Output bioperl subroutines for Error::Pure.
 
  use Error::Pure::Output::Bio qw(err_bio);
 
- print scalar err_bio(@errors);
+ my $err = err_bio(@errors);
+ my @err = err_bio(@errors);
 
 =head1 SUBROUTINES
 
-=over 8
+=head2 C<err_bio>
 
-=item C<err_bio(@errors)>
+ my $err = err_bio(@errors);
+ my @err = err_bio(@errors);
 
 Bioperl print of backtrace.
 
 Returns string in scalar context.
 Returns array of lines in array context.
-
-=back
 
 =head1 EXAMPLE
 

@@ -4,14 +4,18 @@ NAME
 SYNOPSIS
      use Error::Pure::Output::Bio qw(err_bio);
 
-     print scalar err_bio(@errors);
+     my $err = err_bio(@errors);
+     my @err = err_bio(@errors);
 
 SUBROUTINES
-    "err_bio(@errors)"
-            Bioperl print of backtrace.
+  "err_bio"
+     my $err = err_bio(@errors);
+     my @err = err_bio(@errors);
 
-            Returns string in scalar context. Returns array of lines in
-            array context.
+    Bioperl print of backtrace.
+
+    Returns string in scalar context. Returns array of lines in array
+    context.
 
 EXAMPLE
      use strict;
