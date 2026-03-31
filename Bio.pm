@@ -16,7 +16,7 @@ our $VERSION = 0.01;
 sub err_bio {
 	my @errors = @_;
 
-	my $ret;
+	my @ret;
 	foreach my $error_hr (@errors) {
 		my $e = shift @{$error_hr->{'msg'}};
 		chomp $e;
@@ -24,10 +24,10 @@ sub err_bio {
 		# Title.
 		# XXX Add class.
 		my $title = '------------- EXCEPTION -------------';
-		$ret .= $title."\n";
+		push @ret, $title;
 
 		# Error.
-		$ret .= 'MSG: '.$e."\n";
+		push @ret, 'MSG: '.$e;
 
 		# Value.
 		while (@{$error_hr->{'msg'}}) {
@@ -37,28 +37,28 @@ sub err_bio {
 			if (! defined $f) {
 				last;
 			}
-			$ret .= 'VALUE: '.$f;
+			my $ret = 'VALUE: '.$f;
 			if ($t) {
 				$ret .= ': '.$t;
 			}
-			$ret .= "\n";
+			push @ret, $ret;
 		}
 
 		# Stack trace.
 		foreach my $i (0 .. $#{$error_hr->{'stack'}}) {
 			my $st = $error_hr->{'stack'}->[$i];
-			$ret .= 'STACK: '.$st->{'class'};
+			my $ret = 'STACK: '.$st->{'class'};
 			$ret .= $SPACE.$st->{'prog'};
 			$ret .= ':'.$st->{'line'};
-			$ret .= "\n";
+			push @ret, $ret;
 		}
 
 		# Footer.
-		my $footer = ('-' x length($title))."\n";
-		$ret .= $footer;
+		my $footer = ('-' x length($title));
+		push @ret, $footer;
 	}
 
-	return $ret;
+	return wantarray ? @ret : (join "\n", @ret)."\n";
 }
 
 1;
