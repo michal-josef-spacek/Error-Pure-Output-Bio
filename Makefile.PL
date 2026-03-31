@@ -7,7 +7,7 @@ use inc::Module::Install;
 
 # Definition.
 abstract 'Output bioperl subroutines for Error::Pure.';
-author 'Michal Špaček <skim@cpan.org>';
+author 'Michal Spacek <skim@cpan.org>';
 license 'bsd';
 name 'Error-Pure-Output-Bio';
 requires 'Error::Pure::Utils' => 0.11;
