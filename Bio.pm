@@ -62,3 +62,117 @@ sub err_bio {
 }
 
 1;
+
+__END__
+
+=pod
+
+=encoding utf8
+
+=head1 NAME
+
+Error::Pure::Output::Bio - Output bioperl subroutines for Error::Pure.
+
+=head1 SYNOPSIS
+
+ use Error::Pure::Output::Bio qw(err_bio);
+
+ print scalar err_bio(@errors);
+
+=head1 SUBROUTINES
+
+=over 8
+
+=item C<err_bio(@errors)>
+
+Bioperl print of backtrace.
+
+Returns string in scalar context.
+Returns array of lines in array context.
+
+=back
+
+=head1 EXAMPLE
+
+=for comment filename=err_bio.pl
+
+ use strict;
+ use warnings;
+
+ use Error::Pure::Output::Bio qw(err_bio);
+
+ # Fictional error structure.
+ my $err_hr = {
+         'msg' => [
+                 'FOO',
+                 'KEY',
+                 'VALUE',
+         ],
+         'stack' => [
+                 {
+                         'args' => '(2)',
+                         'class' => 'main',
+                         'line' => 1,
+                         'prog' => 'script.pl',
+                         'sub' => 'err',
+                 }, {
+                         'args' => '',
+                         'class' => 'main',
+                         'line' => 20,
+                         'prog' => 'script.pl',
+                         'sub' => 'eval {...}',
+                 }
+         ],
+ };
+
+ # Print out.
+ print scalar err_bio($err_hr);
+
+ # Output:
+ # ------------- EXCEPTION -------------
+ # MSG: FOO
+ # VALUE: KEY: VALUE
+ # STACK: main script.pl:1
+ # STACK: main script.pl:20
+ # -------------------------------------
+
+=head1 DEPENDENCIES
+
+L<Exporter>,
+L<Readonly>.
+
+=head1 SEE ALSO
+
+=over
+
+=item L<Task::Error::Pure>
+
+Install the Error::Pure modules.
+
+=item L<Error::Pure::Output::Text>
+
+Output subroutines for Error::Pure.
+
+=back
+
+=head1 REPOSITORY
+
+L<https://github.com/michal-josef-spacek/Error-Pure-Output-Bio>
+
+=head1 AUTHOR
+
+Michal Josef Špaček L<mailto:skim@cpan.org>
+
+L<http://skim.cz>
+
+=head1 LICENSE AND COPYRIGHT
+
+© Michal Josef Špaček 2013-2026
+
+BSD 2-Clause License
+
+=head1 VERSION
+
+0.01
+
+=cut
