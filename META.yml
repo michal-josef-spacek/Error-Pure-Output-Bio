@@ -24,6 +24,7 @@ no_index:
   directory:
     - inc
     - t
+    - xt
 requires:
   Error::Pure::Utils: 0.11
   Exporter: 0
