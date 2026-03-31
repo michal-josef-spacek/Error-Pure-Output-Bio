@@ -30,7 +30,7 @@ requires:
   Exporter: 0
   Readonly: 0
 resources:
-  bugtracker: https://rt.cpan.org/Public/Dist/Display.html?Name=Error-Pure-Output-Bio
+  bugtracker: https://github.com/michal-josef-spacek/Error-Pure-Output-Bio/issues
   homepage: https://github.com/michal-josef-spacek/Error-Pure-Output-Bio
   license: http://opensource.org/licenses/bsd-license.php
   repository: git://github.com/michal-josef-spacek/Error-Pure-Output-Bio

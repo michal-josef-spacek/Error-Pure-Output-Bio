@@ -12,8 +12,7 @@ name 'Error-Pure-Output-Bio';
 requires 'Error::Pure::Utils' => 0.11;
 requires 'Exporter' => 0;
 requires 'Readonly' => 0;
-resources 'bugtracker' => 'https://rt.cpan.org/Public/Dist/Display.html'.
-	'?Name=Error-Pure-Output-Bio';
+resources 'bugtracker' => 'https://github.com/michal-josef-spacek/Error-Pure-Output-Bio/issues';
 resources 'homepage' => 'https://github.com/michal-josef-spacek/Error-Pure-Output-Bio';
 resources 'repository' => 'git://github.com/michal-josef-spacek/Error-Pure-Output-Bio';
 test_requires 'English' => 0;
