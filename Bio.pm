@@ -15,6 +15,7 @@ our $VERSION = 0.01;
 # Bio error print.
 sub err_bio {
 	my @errors = @_;
+
 	my $ret;
 	foreach my $error_hr (@errors) {
 		my $e = shift @{$error_hr->{'msg'}};
@@ -56,6 +57,7 @@ sub err_bio {
 		my $footer = ('-' x length($title))."\n";
 		$ret .= $footer;
 	}
+
 	return $ret;
 }
 
