@@ -13,5 +13,6 @@ MANIFEST			This list of files
 META.yml
 t/Error-Pure-Output-Bio/01-use.t
 t/Error-Pure-Output-Bio/02-version.t
+t/Error-Pure-Output-Bio/03-err_bio.t
 xt/Error-Pure-Output-Bio/01-pod_coverage.t
 xt/Error-Pure-Output-Bio/02-pod.t
