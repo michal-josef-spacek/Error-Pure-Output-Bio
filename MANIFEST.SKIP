@@ -10,3 +10,4 @@ MYMETA.json.lock
 MYMETA.yml
 .travis.yml
 TODO
+cover_db/
