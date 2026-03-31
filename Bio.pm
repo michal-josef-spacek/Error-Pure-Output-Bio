@@ -10,7 +10,7 @@ use Readonly;
 Readonly::Array our @EXPORT => qw(err_bio);
 Readonly::Scalar my $SPACE => q{ };
 
-our $VERSION = 0.01;
+our $VERSION = 0.02;
 
 # Bio error print.
 sub err_bio {
@@ -173,6 +173,6 @@ BSD 2-Clause License
 
 =head1 VERSION
 
-0.01
+0.02
 
 =cut
