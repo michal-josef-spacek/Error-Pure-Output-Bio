@@ -1,18 +1,15 @@
 package Error::Pure::Output::Bio;
 
-# Pragmas.
 use base qw(Exporter);
 use strict;
 use warnings;
 
-# Modules.
 use Readonly;
 
 # Constants.
 Readonly::Array our @EXPORT => qw(err_bio);
 Readonly::Scalar my $SPACE => q{ };
 
-# Version.
 our $VERSION = 0.01;
 
 # Bio error print.
